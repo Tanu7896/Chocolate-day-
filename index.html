@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chocolate Day 🍫</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- START -->
+<section class="page active" id="start">
+  <h2 class="title cute">A little sweetness, just for you 🍫</h2>
+  <p class="sub">Tap anywhere</p>
+</section>
+
+<!-- CHOCOLATE -->
+<section class="page" id="chocolate">
+  <div class="choco-wrap">
+    <img src="chocolates/chocolate.png" class="choco" onclick="breakChocolate()">
+    <div class="drip"></div>
+  </div>
+  <p class="quote hidden" id="chocoMsg">
+    Every piece tastes better when it’s shared with you.
+  </p>
+</section>
+
+<!-- NOTES -->
+<section class="page" id="notes">
+  <p class="title small cute">Little chocolate thoughts 🤎</p>
+  <div class="cards"></div>
+  <button onclick="goTo('meltGame')">Continue 🍫</button>
+</section>
+
+<!-- 🍫 MELT GAME -->
+<section class="page" id="meltGame">
+  <p class="title small cute">Hold to warm the chocolate 🤎</p>
+  <img src="chocolates/chocolate.png" class="choco melt" id="meltChoco">
+  <div class="meter">
+    <div class="fill" id="meterFill"></div>
+  </div>
+  <p class="hint">Press & hold to melt with love 💗</p>
+</section>
+
+<!-- FINAL -->
+<section class="page" id="final">
+  <p class="final cute">Life is sweeter with you.</p>
+  <button onclick="restart()">Taste it again 😋</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
